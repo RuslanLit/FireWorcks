@@ -13,21 +13,25 @@ body {
 	float: left;
 	width: 5%;
 	background: white;
-  height: auto;
+  height: 700px;
 }
-  .sidedar .text, .sidedar-1  .text { 
+  .sidedar .text { 
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    margin:1em 25% 10em;
+    margin:10px 25%;
+    font-size: 15px;
+    }
+  .sidedar-1  .text  { 
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin:10px 25%;
     font-size: 1.2em;
-    height: 100%;
     }
     .sidedar  img, .sidedar-1  img {height: 45px;
       width: 45px;
-      margin:15%;
+      margin:5%;
     }
-  
-.content {
+  .content {
   float: left;
   display: grid;
     grid-template-areas:
@@ -36,7 +40,7 @@ body {
      'f f f f f f f'
      'f f f f f f f'
      'c c c c c c c';
-  min-height: 650px;
+  height: 700px;
   width: 95%;
   background: url(../img/bg.gif) no-repeat;
   background-attachment: fixed;
@@ -129,11 +133,10 @@ box-shadow: 1px 18px 31px #4b6f94;
   	font-style: italic;
   }
   b {
-  	color:#ccccff;
+  	 color:#ff6666;
   }
-.dot {
-	text-decoration:underline;
-	color:#cc9999;
+.dot {text-decoration: underline;
+	color:#b6fcd5;
 }
 article, .bok {
   grid-area: f;
@@ -145,12 +148,12 @@ article, .bok {
 border-radius: 25px;
 box-shadow: 1px 18px 31px #4b6f94; 
 text-align: justify;
-margin:10px;
-padding:10px;
 font-size:1.7em;
 line-height:1.2em;
-height:650px;
+height:500px;
 overflow: auto;
+margin:10px;
+padding: 10px;
  }
  p {
   margin:9px 5px;
@@ -215,56 +218,11 @@ box-shadow: 1px 18px 31px #4b6f94;
     margin-right:10px;
     padding-top: 25px;
   justify-content: space-around; }
-	.nav a{ flex-grow:1; /* растягиваться на всю ширину */ }
+  	.nav a{ flex-grow:1; /* растягиваться на всю ширину */ }
 }
 /*меньше 800px*/
 @media all and (max-width: 800px) {
-  .grid {display: flex;
-    flex-direction:column;
-  }
-.sidedar {display: flex;
-  width: 100%;
-  background: white;
-  height: 60px;
-  padding-bottom: 15px;
-}
-.sidedar-1 {display: flex;
-  width: 100%;
-  background: white;
-  height: 60px;
-  padding-bottom: 15px;
-}
-.sidedar  .img{float: left;
-  height: 45px;
-      width: 45px;
-      margin-right: 20px;
-    } 
-.sidedar-1  .img{float: left;
-  height: 45px;
-      width: 45px;
-      margin-right: 20px;
-    } 
-  .sidedar .text{ float: right;
-    writing-mode: lr-tb;
-    transform: rotate(360deg);
-    font-size: 20px;
-    margin: 10px;
-    height: 25px;
-    }
-  .sidedar-1 .text{ float: right;
-    writing-mode: lr-tb;
-    transform: rotate(360deg);
-    font-size: 20px;
-    margin: 10px;
-    height: 25px;
-    }
-  .content {
-    width: auto;
-  }
-}
-/* меньше 700px */
-@media all and (max-width: 650px) {
-	.nav { position: relative;
+  .nav { position: relative;
   min-height: 40px;
   padding: 5px 0;
  position: absolute;
@@ -279,10 +237,10 @@ box-shadow: 1px 18px 31px #4b6f94;
  display: none; /* скройте все элементы &lt;li&gt; */
  margin: 0;
  }
- .nav .now {
+  .nav .now {
  display: block; /* показывайте только текущий элемент &lt;li&gt; */
  }
- .nav a {
+  .nav a {
  display: block;
  padding: 5px 5px 5px 32px;
  text-align: left;
@@ -291,7 +249,6 @@ box-shadow: 1px 18px 31px #4b6f94;
  background: none;
  color: #666;
  }
- 
  /* при проведении мышью */
  .nav ul:hover {
  background:blue;
@@ -303,6 +260,32 @@ box-shadow: 1px 18px 31px #4b6f94;
  .nav ul:hover .now {
  background: black;
  }
+  .grid {display: flex;
+    flex-direction:column;
+  }
+.sidedar, .sidedar-1 {display: flex;
+  width: 100%;
+  background: white;
+  height: 60px;
+  padding-bottom: 15px;
+}
+ .sidedar  .img, .sidedar-1  .img{float: left;
+  height: 45px;
+      width: 45px;
+      margin-right: 20px;
+    } 
+  .sidedar .text, .sidedar-1 .text{ float: right;
+    writing-mode: lr-tb;
+    transform: rotate(360deg);
+    margin: 10px;
+    height: 25px;
+    }
+  .content {
+    width: auto;
+  }
+}
+/* меньше 700px */
+@media all and (max-width: 700px) {
 .sidedar-1 .text, .sidedar .text {
   font-size: 14px;
  }
@@ -310,5 +293,24 @@ box-shadow: 1px 18px 31px #4b6f94;
   width: 100px;
   height: 90px;
 }
+article,.bok {
+  font-size: 14px;
 }
-
+.sidedar .text, .sidedar-1 .text {
+  font-size: 10px;
+}
+.nav li, .button {
+    font-size: 0.7em;
+}
+.sidedar  .img, .sidedar-1  .img{float: left;
+  height: 25px;
+      width: 25px;
+      margin-right: 30px;
+    } 
+.button {
+    grid-area: c;
+    align-self: center;
+    grid-column-start: 4;
+    margin: 10px;
+}
+}
