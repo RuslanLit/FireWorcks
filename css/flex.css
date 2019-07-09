@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+	background: radial-gradient(circle farthest-side at 30px 20px, #474747, #333333);
+	font-size: 15px;
+}
+.grid {
+  display: flex;
+}
+.sidedar, .sidedar-1 {
+	float: left;
+	width: 5%;
+	background: white;
+  height: auto;
+}
+  .sidedar .text, .sidedar-1  .text { 
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin:1em 25% 10em;
+    font-size: 1.2em;
+    height: 100%;
+    }
+    .sidedar  img, .sidedar-1  img {height: 45px;
+      width: 45px;
+      margin:15%;
+    }
+  
+.content {
+  float: left;
+  display: grid;
+    grid-template-areas:
+     'a a a a a a b'
+     'd d d d d d d'
+     'f f f f f f f'
+     'f f f f f f f'
+     'c c c c c c c';
+  min-height: 650px;
+  width: 95%;
+  background: url(../img/bg.gif) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+.content-1, .content-2 {display: grid;
+    grid-template-areas:
+     'a a a a a a b'
+     'd d d d d d d'
+     'f f f f f f f'
+     'f f f f f f f'
+     'c c c c c c c';
+  width: 95%;
+    background: url(../img/11.jpg) no-repeat ;
+    background-size: cover;
+     height: auto;
+  }
+.logo {
+  grid-area: a;
+    min-width: 156px;
+    height: 90px;
+    background: url(../img/logo.png) no-repeat;
+    background-position: 10px 3px;
+    margin-right: 15px;
+  }
+.nav {
+    grid-area: b;
+   grid-column-start: 6;
+    margin-right:20px;
+    padding-top: 25px;
+  }
+ .nav ul { 
+      list-style: none;
+     }
+.nav li{
+  display: inline-block;
+margin-left: 5px;
+color:white;
+}
+li {padding: 7px;
+}
+li:hover {
+  color: #b1b0cc;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 50px;
+}
+a {
+  color:white;
+}
+a:hover {
+  color: #b1b0cc;
+}
+.button {
+  grid-area: c;
+    align-self: center;
+    grid-column-start: 5;
+    margin:10px;
+}
+.bad {
+  padding: 5px 5px;
+  font-size:1.8em;
+
+}
+.bad:hover {
+background-color: rgba(0, 0, 0, .7);
+border-radius: 50px;
+box-shadow: 1px 18px 31px #4b6f94;
+}
+.now {
+  background-color: rgba(0, 0, 0, .7);
+border-radius: 50px;
+box-shadow: 1px 18px 31px #4b6f94;
+}
+  .content-2 .nav, .content-1 .nav, .content .nav {
+    grid-column-start: 6;
+   margin-left:10px;
+  }
+  .content-2 article {
+    font-size: 24px;
+  }
+
+  .nav li, .button {
+  	font-size: 1.2em;
+  }
+  .bold, b {
+  	font-weight: bolder;
+  }
+  i{
+  	font-style: italic;
+  }
+  b {
+  	color:#ccccff;
+  }
+.dot {
+	text-decoration:underline;
+	color:#cc9999;
+}
+article, .bok {
+  grid-area: f;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  line-height: 1em;
+  color:white;
+ background-color: rgba(0, 0, 0, .7);
+border-radius: 25px;
+box-shadow: 1px 18px 31px #4b6f94; 
+text-align: justify;
+margin:10px;
+padding:10px;
+font-size:1.7em;
+line-height:1.2em;
+height:650px;
+overflow: auto;
+ }
+ p {
+  margin:9px 5px;
+  clear: left;
+ }
+ blockquote {
+ 	margin:10px;
+ 	padding:10px;
+ }
+ ol {
+  grid-area: f;
+  grid-column-start: 4;
+  grid-row-start: 2;
+  padding:0;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  background: #075c5d;
+  list-style-image: url(../img/fired1.png);
+  list-style-position: inside;
+  border-radius: 25px;
+box-shadow: 1px 18px 31px #4b6f94; 
+}
+ ol a{font-size: 1.3em;
+  font-weight: bold;
+  background-size: 30px;
+ }
+ ol li:hover{
+  background: #6efc9d;
+border-radius: 25px;
+box-shadow: 1px 18px 31px #4b6f94;
+ }
+ .letter::first-letter {
+ 	font-size: 1.4em;
+ 	padding:2px;
+ 	color:red;
+ 	line-height: 0.1em;
+ }
+ h1 {
+ margin: 8px;
+ font-size: 1.4em;
+ color: #b1b0cc;
+ text-align: center;
+ }
+ h2 {
+  margin: 13px;
+  font-size: 1.2em;
+  color: #b1b0cc;
+  text-align: center;
+ }
+ h3 {
+ 	margin: 10px;
+  font-size: 1em;
+  color: #b1b0cc;
+  text-align: center;
+ }
+ /* меньше 1085px */
+@media all and (max-width: 1085px) {
+  .content .nav {
+    grid-area: b;
+   grid-column-start: 4;
+    margin-right:10px;
+    padding-top: 25px;
+  justify-content: space-around; }
+	.nav a{ flex-grow:1; /* растягиваться на всю ширину */ }
+}
+/*меньше 800px*/
+@media all and (max-width: 800px) {
+  .grid {display: flex;
+    flex-direction:column;
+  }
+.sidedar {display: flex;
+  width: 100%;
+  background: white;
+  height: 60px;
+  padding-bottom: 15px;
+}
+.sidedar-1 {display: flex;
+  width: 100%;
+  background: white;
+  height: 60px;
+  padding-bottom: 15px;
+}
+.sidedar  .img{float: left;
+  height: 45px;
+      width: 45px;
+      margin-right: 20px;
+    } 
+.sidedar-1  .img{float: left;
+  height: 45px;
+      width: 45px;
+      margin-right: 20px;
+    } 
+  .sidedar .text{ float: right;
+    writing-mode: lr-tb;
+    transform: rotate(360deg);
+    font-size: 20px;
+    margin: 10px;
+    height: 25px;
+    }
+  .sidedar-1 .text{ float: right;
+    writing-mode: lr-tb;
+    transform: rotate(360deg);
+    font-size: 20px;
+    margin: 10px;
+    height: 25px;
+    }
+  .content {
+    width: auto;
+  }
+}
+/* меньше 700px */
+@media all and (max-width: 650px) {
+	.nav { position: relative;
+  min-height: 40px;
+  padding: 5px 0;
+ position: absolute;
+ top: 80px;
+ right: 50px;
+ border: solid 1px #aaa;
+ background:url(../img/menu.png) no-repeat 10px 11px;
+ border-radius: 5px;
+ box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+.nav li {
+ display: none; /* скройте все элементы &lt;li&gt; */
+ margin: 0;
+ }
+ .nav .now {
+ display: block; /* показывайте только текущий элемент &lt;li&gt; */
+ }
+ .nav a {
+ display: block;
+ padding: 5px 5px 5px 32px;
+ text-align: left;
+ }
+ .nav .now a {
+ background: none;
+ color: #666;
+ }
+ 
+ /* при проведении мышью */
+ .nav ul:hover {
+ background:blue;
+ }
+ .nav ul:hover li {
+ display: block;
+ margin: 0 0 5px;
+ }
+ .nav ul:hover .now {
+ background: black;
+ }
+.sidedar-1 .text, .sidedar .text {
+  font-size: 14px;
+ }
+.logo {
+  width: 100px;
+  height: 90px;
+}
+}
+
