@@ -279,7 +279,7 @@ box-shadow: 1px 18px 31px #4b6f94;
       margin-right: 20px;
     } 
   .sidedar .text, .sidedar-1 .text{ float: right;
-    writing-mode: lr-tb;
+    writing-mode: vertical-rl;
     transform: rotate(360deg);
     margin: 10px;
     height: 25px;
