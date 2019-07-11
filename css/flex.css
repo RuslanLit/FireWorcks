@@ -43,8 +43,8 @@ body {
   height: 700px;
   width: 95%;
   background: url(../img/bg.gif) no-repeat;
- 
-  background-position: center;
+  background-attachment: fixed;
+   background-position: center center;
   background-size: cover;
   color: white;
 }
@@ -57,7 +57,9 @@ body {
      'c c c c c c c';
   width: 95%;
     background: url(../img/11.jpg) no-repeat ;
-    background-size: cover;
+     background-attachment: fixed;
+   background-position: center center;
+  background-size: cover;
      height: auto;
   }
 .logo {
