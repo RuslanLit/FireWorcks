@@ -72,7 +72,7 @@ body {
   }
 .nav {
     grid-area: b;
-   grid-column-start: 6;
+   grid-column-start: 5;
     margin-right:20px;
     padding-top: 25px;
   }
@@ -119,7 +119,7 @@ border-radius: 50px;
 box-shadow: 1px 18px 31px #4b6f94;
 }
   .content-2 .nav, .content-1 .nav, .content .nav {
-    grid-column-start: 6;
+    grid-column-start: 5;
    margin-left:10px;
   }
   .content-2 article {
