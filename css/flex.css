@@ -123,6 +123,7 @@ box-shadow: 1px 18px 31px #4b6f94;
    margin-left:10px;
   }
   .content-2 article {
+	  padding: 8px;
     font-size: 24px;
   }
 
@@ -288,6 +289,7 @@ box-shadow: 1px 18px 31px #4b6f94;
     }
   .content {
     width: auto;
+	padding:8px;
   }
 }
 /* меньше 700px */
