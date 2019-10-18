@@ -94,8 +94,8 @@ li:hover {
 a {
   color:white;
 }
-a:hover {
-  color: #b1b0cc;
+.nav ul li:hover a {
+	color: #b1b0cc;  
 }
 .button {
   grid-area: c;
