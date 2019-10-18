@@ -94,7 +94,7 @@ li:hover {
 a {
   color:white;
 }
-.nav ul li:hover a {
+li:hover a {
 	color: #b1b0cc;  
 }
 .button {
